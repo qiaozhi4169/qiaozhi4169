@@ -1,0 +1,36 @@
+point1.y=point2.y;
+					}
+				}
+			}
+			ctx.globalAlpha=sparks[i].alpha;
+			ctx.drawImage(sparks[i].img,point.x-size/2,point.y-size/2,size,size);
+		}
+	}
+}
+ 
+function frame(){
+ 
+	if(frames>100000){
+		seedTimer=0;
+		frames=0;
+	}
+	frames++;
+	draw();
+	doLogic();
+	requestAnimationFrame(frame);
+}
+ 
+window.addEventListener("resize",()=>{
+	canvas.width=canvas.clientWidth;
+	canvas.height=canvas.clientHeight;
+	cx=canvas.width/2;
+	cy=canvas.height/2;
+});
+ 
+initVars();
+frame();</script>
+ 
+
+————————————————
+版权声明：本文为CSDN博主「论恒」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/m0_66674794/article/details/125162172
