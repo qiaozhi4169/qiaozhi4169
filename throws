@@ -1,0 +1,14 @@
+public void reverse(BillingInfo inBillingInfo) 
+      throws BillingException 
+  { 
+    if (REVERSE_RESPONSE == EXCEPTION) 
+      throw new NullPointerException("Developer Null Pointer"); 
+ 
+    if (REVERSE_RESPONSE == BILLING_EXCEPTION) 
+      throw new BillingException("Developer Billing Exception"); 
+  } 
+ 
+  /** 
+   * see BillingManager#refund(BillingInfo) 
+   */ 
+  public void refund(BillingInfo inBillingInfo) 
